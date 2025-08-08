@@ -69,6 +69,12 @@ public class Calculator {
                         i++;
 
                         if (i == 5) {
+                            reader.close();
+                            writer.close();
+                            in.close();
+                            out.close();
+                            cliSoc.close();
+                            svSoc.close();
                             System.exit(0);
                         }
                     }
