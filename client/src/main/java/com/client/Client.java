@@ -46,14 +46,15 @@ public class Client {
                         opString = "";
                         break;
                 }
+                
+                out.println(msg);
 
-                try {
+                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     continue;
                 }
                 
-                out.println(msg);
                 System.out.println("Instruction sent: " + a + " " + opString + " " + b);
                 try {
                     Thread.sleep(1000);
