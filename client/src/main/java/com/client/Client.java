@@ -21,8 +21,7 @@ public class Client {
             int op, a, b;
             String msg, opString;
 
-            // while (true) {
-            for (int i = 0; i < 5; i++) {
+            while (true) {
 
                 op = generateRandom(4);
                 a = generateRandom(100);
@@ -55,7 +54,7 @@ public class Client {
                 System.out.println("Result = " + response);
 
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     continue;
                 }

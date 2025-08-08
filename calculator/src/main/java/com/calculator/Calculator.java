@@ -65,18 +65,6 @@ public class Calculator {
                         System.out.println("Instruction received = " + arr[1] + " " + op + " " + arr[2]);
 
                         writer.println(result);
-                        
-                        i++;
-
-                        if (i == 5) {
-                            reader.close();
-                            writer.close();
-                            in.close();
-                            out.close();
-                            cliSoc.close();
-                            svSoc.close();
-                            System.exit(0);
-                        }
                     }
                 } catch (IOException e) {
                     System.out.println("Error handling client");
