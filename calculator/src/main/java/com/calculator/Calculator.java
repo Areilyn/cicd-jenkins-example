@@ -18,7 +18,8 @@ public class Calculator {
 
         try (ServerSocket svSoc = new ServerSocket(PORT)) {
 
-            while (true) {
+            // while (true) {
+            for (int i = 0; i < 5; i++) {
 
                 try (Socket cliSoc = svSoc.accept()) {
                     System.out.println("Connected through port " + PORT);

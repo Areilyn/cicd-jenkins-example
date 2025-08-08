@@ -20,7 +20,9 @@ public class Client {
 
             int op, a, b;
             String msg, opString;
-            while (true) {
+
+            // while (true) {
+            for (int i = 0; i < 5; i++) {
 
                 op = generateRandom(4);
                 a = generateRandom(100);
