@@ -18,8 +18,7 @@ public class Calculator {
 
         try (ServerSocket svSoc = new ServerSocket(PORT)) {
 
-            // while (true) {
-            for (int i = 0; i < 5; i++) {
+            while (true) {
 
                 try (Socket cliSoc = svSoc.accept()) {
                     System.out.println("Connected through port " + PORT);
@@ -32,6 +31,7 @@ public class Calculator {
 
                     String inst;
                     int result = 0;
+                    int i = 0;
 
                     while ((inst = reader.readLine()) != null) {
 
@@ -65,6 +65,12 @@ public class Calculator {
                         System.out.println("Instruction received = " + arr[1] + " " + op + " " + arr[2]);
 
                         writer.println(result);
+                        
+                        i++;
+
+                        if (i == 5) {
+                            System.exit(0);
+                        }
                     }
                 } catch (IOException e) {
                     System.out.println("Error handling client");
