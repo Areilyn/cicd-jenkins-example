@@ -1,0 +1,25 @@
+
+services:
+  calculator:
+    build:
+      context: ./calculator
+      dockerfile: Dockerfile
+    container_name: calculator
+    ports:
+      - "5000:5000"
+    networks:
+      - calc-network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: client
+    depends_on:
+      - calculator
+    networks:
+      - calc-network
+
+networks:
+  calc-network:
+    driver: bridge
